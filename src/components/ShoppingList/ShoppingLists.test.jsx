@@ -5,15 +5,27 @@ import {
 import ShoppingLists from './ShoppingLists';
 
 describe('ShoppingLists', () => {
-  it('renders shopping lists', () => {
+  it('renders a list of shopping lists', () => {
     const now = new Date().toString();
     const shoppingLists = [
       {
         id: 1,
         created_at: now,
-        name: 'shopping-lists',
+        name: 'cats',
         shoppingItems: [],
-      }
+      },
+      {
+        id: 2,
+        created_at: now,
+        name: 'dogs',
+        shoppingItems: [],
+      },
+      {
+        id: 3,
+        created_at: now,
+        name: 'turtles',
+        shoppingItems: [],
+      },
     ];
     render(
       <ShoppingLists
