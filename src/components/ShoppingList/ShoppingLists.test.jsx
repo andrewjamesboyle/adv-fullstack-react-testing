@@ -9,18 +9,18 @@ describe('ShoppingLists', () => {
     const now = new Date().toString();
     const shoppingLists = [
       {
-        shoppingItems: [
-          { id: '1', created_at: now, name: 'Target' },
-          { id: '2', created_at: now, name: 'Home Depot' },
-          { id: '3', created_at: now, name: 'Ikea' }
-        ] }
+        id: 1,
+        created_at: now,
+        name: 'shopping-lists',
+        shoppingItems: [],
+      }
     ];
     render(
       <ShoppingLists
         shoppingLists={shoppingLists}
       />
     );
-
+    
     expect(screen.getByTestId('shopping-lists')).not.toBe(null);
   });
 });
